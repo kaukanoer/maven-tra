@@ -15,39 +15,25 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
-        <a href="${pageContext.request.contextPath}/request">Request</a>
-        <a href="${pageContext.request.contextPath}/settlement">Settlement</a>
-        <a href="${pageContext.request.contextPath}/account">Account</a>
-        <a href="${pageContext.request.contextPath}/divisi">Divisi</a>        
-
-
-        <c:forEach var = "divisi" items = "${divisionList}" >
-            <c:out value = "${divisi.id}"/>
-            <c:out value = "${divisi.divisi}"/>
-        </c:forEach>
-
-        <c:forEach var="ac" items ="${accountList}">
-            <c:out value ="${ac.nik}"/>
-            <c:out value ="${ac.nama}"/>
-        </c:forEach>  
-        
-        <c:forEach var="re" items ="${requestList}">
-            <c:out value ="${re.keperluan}"/>
-            <c:out value ="${re.hotel}"/>
-        </c:forEach> 
-        
-        <c:forEach var="se" items ="${settlementList}">
-            <c:out value ="${se.nota}"/>
-            <c:out value ="${se.keterangan}"/>
-        </c:forEach> 
-        <form action="/addDivision" method="POST">
+        <form action="/division/add" method="POST">
             Divisi: <input type="text" name="divisionName">
             <input type="submit" value="Simpan"> 
         </form>
-        <form action="/deleteDivision/{id}" method="GET">
-            Delete id divisi : <input type="text" name="id">
-            <input type="submit" value="Delete">            
-        </form>
+        <table style="border: 1px">
+            <thead>
+                <th>Id</th>
+                <th>Nama</th>
+                <th>Action</th>
+            </thead>
+            <tbody>
+                <c:forEach var = "divisi" items = "${divisionList}">
+                    <tr>
+                        <td><c:out value = "${divisi.id}"/></td>
+                        <td><c:out value = "${divisi.divisi}"/></td>
+                        <td><a href="edit/${divisi.id}">Edit</a></td>
+                    </tr>
+                </c:forEach>
+            </tbody>
+        </table>        
     </body>
 </html>

@@ -3,15 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.spring.tra.iface;
+package com.spring.tra.interfaces;
 
 import com.spring.tra.entity.Divisions;
-import org.springframework.data.repository.CrudRepository;
+import java.util.List;
 
 /**
  *
  * @author Kaukanoer
  */
-public interface DivisiInterface extends CrudRepository<Divisions, String> {
-    
+public interface DivisiInterface {
+    public List<Divisions> getAll();
+    public void saveorupdate(Divisions divisi);
+    public Divisions getbyId (String id);
 }

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.spring.tra.iface;
+package com.spring.tra.repository;
 
 import com.spring.tra.entity.Accounts;
 import org.springframework.data.repository.CrudRepository;
@@ -12,6 +12,6 @@ import org.springframework.data.repository.CrudRepository;
  *
  * @author Kaukanoer
  */
-public interface AccountInterface extends CrudRepository<Accounts, String> {
+public interface AccountRepository extends CrudRepository<Accounts, String> {
     
 }

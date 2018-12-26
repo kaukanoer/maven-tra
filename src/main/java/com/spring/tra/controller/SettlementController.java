@@ -5,7 +5,7 @@
  */
 package com.spring.tra.controller;
 
-import com.spring.tra.iface.SettlementInterface;
+import com.spring.tra.interfaces.SettlementInterface;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -23,7 +23,7 @@ public class SettlementController {
     @RequestMapping("/settlement")
     public ModelAndView getAll(){
         ModelAndView mav = new ModelAndView("index");
-        mav.addObject("settlementList", si.findAll());
+        mav.addObject("settlementList", si.getAll());
         return mav;
     }
     

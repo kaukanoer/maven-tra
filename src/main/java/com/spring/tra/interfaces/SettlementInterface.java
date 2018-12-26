@@ -3,15 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.spring.tra.iface;
+package com.spring.tra.interfaces;
 
+import com.spring.tra.entity.Divisions;
 import com.spring.tra.entity.Settlements;
-import org.springframework.data.repository.CrudRepository;
+import java.util.List;
 
 /**
  *
  * @author Kaukanoer
  */
-public interface SettlementInterface extends CrudRepository<Settlements, String> {
-    
+public interface SettlementInterface {
+    public List<Settlements> getAll();
+    public void saveorupdate(Settlements s);
 }

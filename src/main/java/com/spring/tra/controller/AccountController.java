@@ -5,7 +5,7 @@
  */
 package com.spring.tra.controller;
 
-import com.spring.tra.iface.AccountInterface;
+import com.spring.tra.interfaces.AccountInterface;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -23,7 +23,7 @@ public class AccountController {
     @RequestMapping("/account")
     public ModelAndView getAll (){
         ModelAndView mav = new ModelAndView("index");
-        mav.addObject("accountList", ai.findAll());
+        mav.addObject("accountList", ai.getAll());
         return mav;
     }
 }

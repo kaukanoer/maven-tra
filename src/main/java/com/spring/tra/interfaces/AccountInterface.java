@@ -3,15 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.spring.tra.iface;
+package com.spring.tra.interfaces;
 
-import com.spring.tra.entity.Requests;
-import org.springframework.data.repository.CrudRepository;
+import com.spring.tra.entity.Accounts;
+import java.util.List;
 
 /**
  *
  * @author Kaukanoer
  */
-public interface RequestInterface extends CrudRepository<Requests, String> {
-    
+public interface AccountInterface {
+    public List<Accounts> getAll();
+    public void saveorupdate(Accounts account);    
 }
