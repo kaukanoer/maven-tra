@@ -15,7 +15,7 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <form method="POST" action="../add">
+        <form method="POST" action="/division/add">
             <h4>Divisi</h4>
             <input type="hidden" name="id" value="${field.id}"/>
             <input type="text" name="divisionName" value="${field.divisi}"/>

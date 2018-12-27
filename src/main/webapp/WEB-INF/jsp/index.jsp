@@ -15,7 +15,9 @@
         <title>JSP Page</title>
     </head>
     <body>
+        <a href="${pageContext.request.contextPath}/request/">Request</a>
         <form action="/division/add" method="POST">
+            <input type="hidden" name="id">
             Divisi: <input type="text" name="divisionName">
             <input type="submit" value="Simpan"> 
         </form>

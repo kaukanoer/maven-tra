@@ -123,7 +123,7 @@ public class Requests implements Serializable {
         this.id = id;
     }
 
-    public Requests(String id, String keperluan, String transportBerangkat, Date tanggalBerangkat, String transportPulang, Date tanggalPulang, String hotel, Date cekIn, Date cekOut, String status, String isDelete) {
+    public Requests(String id, String keperluan, String transportBerangkat, Date tanggalBerangkat, String transportPulang, Date tanggalPulang, String hotel, Date cekIn, Date cekOut, String note, String status, String isDelete, Accounts account) {
         this.id = id;
         this.keperluan = keperluan;
         this.transportBerangkat = transportBerangkat;
@@ -133,8 +133,10 @@ public class Requests implements Serializable {
         this.hotel = hotel;
         this.cekIn = cekIn;
         this.cekOut = cekOut;
+        this.catatan = note;
         this.status = status;
         this.isDelete = isDelete;
+        this.accountNik = account;
     }
 
     public String getId() {
